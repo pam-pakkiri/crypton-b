@@ -1,0 +1,14 @@
+DEBUG: API Key starts with: 'NXme'
+MATCH: Key in .env matches the screenshot exactly.
+
+Checking Binance Connection...
+
+--- Testing Testnet Spot ---
+FAILED (Spot Testnet): binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+
+--- Testing Testnet Futures (Mock Trading) ---
+FAILED (Futures Testnet): binance {"code":-2008,"msg":"Invalid Api-Key ID."}
+
+CONCLUSION: Still could not connect.
+If these are 'Demo Trade' keys, please ensure they were created on the Binance Futures Testnet (https://testnet.binancefuture.com/) and NOT the live site.
+If they WERE created on the live site but for 'Mock Trading', please double-check if your Secret Key was copied correctly.

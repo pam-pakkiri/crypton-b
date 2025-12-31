@@ -1,0 +1,58 @@
+INFO:     Started server process [30740]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63268 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Algo Trade Bot API Starting...
+Algo Trade Bot API & WebSocket Relay Started
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Initializing components for BTC/USDT with strategy institutional...
+Client initialized in TESTNET mode (sandbox).
+Starting Futures Trader for BTC/USDT...
+INFO:     127.0.0.1:57876 - "POST /bot/start HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Leverage set to 5x for BTC/USDT
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+[Heartbeat] 2025-12-26 18:17:19.545739 | BTC/USDT | Price: 88716.7 | Signal: HOLD | Reason: Regime: TRENDING | Steady market, waiting for institutional flow.
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Binance API Error [400] on /fapi/v1/openOrders: {"code":-1021,"msg":"Timestamp for this request is outside of the recvWindow."}
+INFO:     127.0.0.1:60436 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65317 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65317 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65317 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65317 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Binance API Error [400] on /fapi/v2/account: {"code":-1021,"msg":"Timestamp for this request is outside of the recvWindow."}
+INFO:     127.0.0.1:65317 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62616 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62616 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Leverage set to 5x for BTC/USDT
+[Heartbeat] 2025-12-26 18:18:24.609556 | BTC/USDT | Price: 88697.9 | Signal: HOLD | Reason: Regime: TRENDING | Steady market, waiting for institutional flow.
+INFO:     127.0.0.1:62616 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62616 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62616 - "GET /bot/status HTTP/1.1" 200 OK

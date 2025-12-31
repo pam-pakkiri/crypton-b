@@ -1,0 +1,80 @@
+INFO:     Started server process [30624]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60916 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:56422 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:59468 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:50225 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:56632 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:51924 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:57175 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49403 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:50447 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:50311 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62742 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:63349 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:51502 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:57881 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:58382 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64476 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:52487 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62871 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Algo Trade Bot API Starting...
+Algo Trade Bot API & WebSocket Relay Started
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60533 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60533 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57888 - "GET /tickers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60533 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64808 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60533 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50599 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52049 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59455 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49821 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49827 - "GET /tickers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49821 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49821 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49821 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61134 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54029 - "GET /tickers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51737 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61134 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51498 - "GET /bot/status HTTP/1.1" 200 OK

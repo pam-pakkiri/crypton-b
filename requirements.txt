@@ -1,0 +1,6 @@
+ccxt
+pandas
+python-dotenv
+numpy
+fastapi
+uvicorn

@@ -1,0 +1,12 @@
+Testing BinanceClient with Testnet...
+Client initialized in TESTNET mode (demo-fapi).
+
+fetch Request: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1766052226653&recvWindow=10000&signature=4e3379e9ac4700316698460f714f593ec65642d7fd1a80f2d9670288514cc429 RequestHeaders: {'X-MBX-APIKEY': 'NXmeeYvt5cJTYEOdHzW9L8N0VQYkpCTSpGLNxSZ8HsXK19qaf7uRJHUT0JpDiDGY', 'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} RequestBody: None
+
+fetch Response: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1766052226653&recvWindow=10000&signature=4e3379e9ac4700316698460f714f593ec65642d7fd1a80f2d9670288514cc429 400 ResponseHeaders: {'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Dec 2025 10:03:46 GMT', 'Expires': '0', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 303e917d845d3965f206781fd60fa0d4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BLR50-P4', 'X-Amz-Cf-Id': 'XgOesZSho1hRmB2QqjqV2GaEQDtczR6SqDOTeS7Jm-MGpwCtPbdzWA=='} ResponseBody: {"code":-2008,"msg":"Invalid Api-Key ID."}
+Error fetching balance: binance {"code":-2008,"msg":"Invalid Api-Key ID."}
+Could not fetch balance.
+OHLCV data fetched!
+            timestamp     open     high      low    close    volume
+3 2025-12-18 09:00:00  86934.9  87350.0  86755.0  87237.0  4381.369
+4 2025-12-18 10:00:00  87236.9  87248.0  87180.0  87216.1   227.760

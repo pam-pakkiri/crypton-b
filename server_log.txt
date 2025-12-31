@@ -1,0 +1,105 @@
+INFO:     Started server process [19112]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Algo Trade Bot API Starting...
+Initializing components...
+Client initialized in TESTNET mode (sandbox).
+BinanceClient initialized.
+RiskManager initialized.
+Strategy initialized.
+Trader instance created.
+Algo Trade Bot API & WebSocket Relay Started
+Starting Futures Trader for BTC/USDT...
+INFO:     127.0.0.1:53132 - "POST /bot/start HTTP/1.1" 200 OK
+Leverage set to 5x for BTC/USDT
+[Heartbeat] 2025-12-26 15:14:37.254916 | BTC/USDT | Price: 88749.1 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:49677 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+Leverage set to 5x for BTC/USDT
+[Heartbeat] 2025-12-26 15:15:40.171967 | BTC/USDT | Price: 88744.5 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:52084 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55596 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Fetching OrderBook for BTC/USDT (limit 18)...
+INFO:     127.0.0.1:57432 - "GET /tickers HTTP/1.1" 200 OK
+OrderBook fetch failed or returned None
+INFO:     127.0.0.1:56502 - "GET /orderbook?symbol=BTC%2FUSDT&limit=18 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60989 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60989 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60989 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60989 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60989 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:62871 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Fetching OrderBook for BTC/USDT (limit 18)...
+INFO:     127.0.0.1:56502 - "GET /tickers HTTP/1.1" 200 OK
+OrderBook fetch failed or returned None
+INFO:     127.0.0.1:57432 - "GET /orderbook?symbol=BTC%2FUSDT&limit=18 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+Stopping Trader...
+INFO:     127.0.0.1:57432 - "POST /bot/stop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "OPTIONS /bot/config HTTP/1.1" 200 OK
+Config updated: symbol='BTC/USDT' leverage=10 margin_mode='isolated' risk_per_trade=0.01 trade_amount=100.0
+INFO:     127.0.0.1:49986 - "POST /bot/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+Config updated: symbol='BTC/USDT' leverage=20 margin_mode='isolated' risk_per_trade=0.01 trade_amount=100.0
+INFO:     127.0.0.1:57432 - "POST /bot/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+Config updated: symbol='BTC/USDT' leverage=20 margin_mode='isolated' risk_per_trade=0.01 trade_amount=100.0
+INFO:     127.0.0.1:57432 - "POST /bot/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+Config updated: symbol='BTC/USDT' leverage=20 margin_mode='isolated' risk_per_trade=0.01 trade_amount=100.0
+INFO:     127.0.0.1:57432 - "POST /bot/config HTTP/1.1" 200 OK
+Starting Futures Trader for BTC/USDT...
+INFO:     127.0.0.1:57432 - "POST /bot/start HTTP/1.1" 200 OK
+Leverage set to 20x for BTC/USDT
+[Heartbeat] 2025-12-26 15:16:15.026680 | BTC/USDT | Price: 88742.5 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49986 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+Leverage set to 20x for BTC/USDT
+[Heartbeat] 2025-12-26 15:16:43.638838 | BTC/USDT | Price: 88779.3 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+Leverage set to 20x for BTC/USDT
+[Heartbeat] 2025-12-26 15:17:18.348948 | BTC/USDT | Price: 88768.4 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57489 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+Leverage set to 20x for BTC/USDT
+[Heartbeat] 2025-12-26 15:17:46.579992 | BTC/USDT | Price: 88772.1 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+Leverage set to 20x for BTC/USDT
+[Heartbeat] 2025-12-26 15:18:21.148335 | BTC/USDT | Price: 88764.6 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59909 - "GET /bot/status HTTP/1.1" 200 OK
+Leverage set to 20x for BTC/USDT
+[Heartbeat] 2025-12-26 15:18:49.256989 | BTC/USDT | Price: 88800.8 | Signal: HOLD | Reason: Market is Neutral (No clear trend or structure)
+INFO:     127.0.0.1:54808 - "GET /bot/status HTTP/1.1" 200 OK

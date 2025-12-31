@@ -1,0 +1,904 @@
+INFO:     Started server process [37648]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58802 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Algo Trade Bot API Starting...
+Algo Trade Bot API & WebSocket Relay Started
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61747 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49872 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51547 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51547 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62191 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62191 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55113 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62191 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55113 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62191 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55113 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62191 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55113 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62191 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55113 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62191 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55113 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62193 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55113 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61543 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49322 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57915 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51799 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52221 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62146 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62612 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59285 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63920 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51710 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64013 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57296 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64013 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57101 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52760 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56091 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52760 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49672 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56919 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64857 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49786 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56255 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49786 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65254 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59725 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51640 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49286 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54290 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63134 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51207 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63134 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51207 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58055 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51207 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52288 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51695 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52288 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51695 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57613 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53651 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57481 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57894 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53688 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54581 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64467 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63044 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64467 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63044 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60312 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63044 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52053 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50358 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50974 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49391 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50974 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53327 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64828 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51910 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64378 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51910 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64378 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51910 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64378 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51910 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64378 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51910 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62157 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49840 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60493 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54910 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54447 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54447 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54301 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60602 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51237 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60135 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59034 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50062 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58401 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60723 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62496 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59807 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62496 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49674 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65093 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58731 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52062 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64415 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64443 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61955 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63942 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54895 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55466 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55217 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51317 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63322 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55729 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56576 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59886 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64610 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53399 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54321 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58169 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60108 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49666 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49671 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59272 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64888 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64888 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64888 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64888 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64888 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49939 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61757 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64082 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64082 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60928 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56753 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60564 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54484 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55600 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61826 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56441 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50962 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56887 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59851 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59715 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65534 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58743 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59962 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59962 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55990 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61810 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65234 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64324 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57964 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50244 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57964 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50244 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57964 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50244 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57964 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50244 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50336 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50244 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50336 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50336 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50847 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50847 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50847 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50847 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50847 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50847 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50847 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50290 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59571 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50290 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59571 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50290 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59571 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50290 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59571 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50290 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59571 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50290 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59571 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50379 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58364 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50379 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62976 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50379 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62976 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54431 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50245 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55296 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58406 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55737 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58709 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59582 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58709 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59582 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58709 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59582 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58709 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59582 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49405 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59582 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49405 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56269 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49405 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61465 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49405 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63670 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60310 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52470 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52910 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60928 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49743 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53709 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49743 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49678 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49743 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61562 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53560 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61562 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53560 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61562 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53560 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61562 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53560 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53560 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53560 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62703 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62703 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62703 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52001 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52001 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52001 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57861 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56121 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56642 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60099 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53755 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64137 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63575 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60269 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49687 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54328 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58761 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54328 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55953 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56726 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56645 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56726 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54814 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56726 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61517 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56726 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53603 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56726 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53603 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56726 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53603 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51938 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53603 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51938 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:53603 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51938 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54202 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51938 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54202 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51938 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54202 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54202 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54202 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54202 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51309 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51309 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:49805 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60742 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52256 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56514 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50629 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55650 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65136 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57020 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:62789 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+Fetching OrderBook for BTC/USDT (limit 20)...
+Client initialized in TESTNET mode (sandbox).
+OrderBook fetched: 20 bids, 20 asks
+INFO:     127.0.0.1:50738 - "GET /orderbook?symbol=BTC%2FUSDT&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57020 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50738 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:56794 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54523 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55062 - "GET /tickers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59870 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55062 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:55109 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62135 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61459 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57296 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61459 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52702 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61459 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62515 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61459 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62515 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52823 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60268 - "OPTIONS /bot/start HTTP/1.1" 200 OK
+Initializing components for BTC/USDT with strategy scalping...
+Client initialized in TESTNET mode (sandbox).
+Starting Futures Trader for BTC/USDT...
+INFO:     127.0.0.1:60268 - "POST /bot/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52823 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Binance API Error [400] on /fapi/v1/leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+Error setting leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+INFO:     127.0.0.1:60268 - "GET /bot/status HTTP/1.1" 200 OK
+[Heartbeat] 2025-12-27 15:59:21.727848 | BTC/USDT | Price: 87466.5 | Signal: HOLD | Reason: Waiting for scalp setup...
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60130 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63402 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65440 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63402 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65440 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63402 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52795 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51983 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62588 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52651 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62588 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55095 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62588 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Binance API Error [400] on /fapi/v1/leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+Error setting leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+[Heartbeat] 2025-12-27 16:00:32.332900 | BTC/USDT | Price: 87509.7 | Signal: HOLD | Reason: Waiting for scalp setup...
+INFO:     127.0.0.1:62266 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51896 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62266 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51783 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51783 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54755 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59117 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59117 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:63210 - "GET /bot/status HTTP/1.1" 200 OK
+Binance API Error [400] on /fapi/v1/leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+Error setting leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+[Heartbeat] 2025-12-27 16:01:41.079955 | BTC/USDT | Price: 87511.4 | Signal: HOLD | Reason: Waiting for scalp setup...
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64482 - "GET /bot/status HTTP/1.1" 200 OK
+Binance API Error [400] on /fapi/v1/leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+Error setting leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+[Heartbeat] 2025-12-27 16:02:47.761612 | BTC/USDT | Price: 87500.0 | Signal: HOLD | Reason: Waiting for scalp setup...
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:60378 - "GET /bot/status HTTP/1.1" 200 OK
+Binance API Error [400] on /fapi/v1/leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+Error setting leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+[Heartbeat] 2025-12-27 16:03:56.174180 | BTC/USDT | Price: 87454.8 | Signal: HOLD | Reason: Waiting for scalp setup...
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50863 - "GET /bot/status HTTP/1.1" 200 OK
+Binance API Error [400] on /fapi/v1/leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+Error setting leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+[Heartbeat] 2025-12-27 16:05:03.892150 | BTC/USDT | Price: 87455.5 | Signal: HOLD | Reason: Waiting for scalp setup...
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52391 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:64387 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+Fetching OrderBook for BTC/USDT (limit 20)...
+Client initialized in TESTNET mode (sandbox).
+OrderBook fetched: 20 bids, 20 asks
+INFO:     127.0.0.1:54684 - "GET /orderbook?symbol=BTC%2FUSDT&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52391 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54684 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:64983 - "GET /bot/status HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:63956 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+Fetching OrderBook for BTC/USDT (limit 20)...
+OrderBook fetched: 20 bids, 20 asks
+INFO:     127.0.0.1:65513 - "GET /orderbook?symbol=BTC%2FUSDT&limit=20 HTTP/1.1" 200 OK
+Binance API Error [400] on /fapi/v1/leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+Error setting leverage: {"code":-4161,"msg":"Leverage reduction is not supported in Isolated Margin Mode with open positions."}
+INFO:     127.0.0.1:51557 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+[Heartbeat] 2025-12-27 16:06:13.701867 | BTC/USDT | Price: 87452.0 | Signal: HOLD | Reason: Waiting for scalp setup...
+INFO:     127.0.0.1:51557 - "OPTIONS /bot/stop HTTP/1.1" 200 OK
+Stopping Trader...
+INFO:     127.0.0.1:51557 - "POST /bot/stop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64351 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:51557 - "GET /bot/status HTTP/1.1" 200 OK

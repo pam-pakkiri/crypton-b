@@ -1,0 +1,28 @@
+Testing BinanceClient with Testnet...
+
+fetch Request: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1766051455373&recvWindow=10000&signature=4297995871fc57297c6fa1fa5e0a931e48f9165730b1c4a41b5e20cc8e39302c RequestHeaders: {'X-MBX-APIKEY': 'NXmeeYvt5cJTYEOdHzW9L8N0VQYkpCTSpGLNxSZ8HsXK19qaf7uRJHUT0JpDiDGY', 'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} RequestBody: None
+
+fetch Response: binance GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1766051455373&recvWindow=10000&signature=4297995871fc57297c6fa1fa5e0a931e48f9165730b1c4a41b5e20cc8e39302c 400 ResponseHeaders: {'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Dec 2025 09:50:54 GMT', 'Expires': '0', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 417acc55dd3b4065efc4abf65d6ee75c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BLR50-P4', 'X-Amz-Cf-Id': 'u1qjIEPpnmddpsM1EFPj4ecjfR8XEdQv3QOpCjHdUjn30ui21pSi0w=='} ResponseBody: {"code":-2008,"msg":"Invalid Api-Key ID."}
+Error fetching balance: binance {"code":-2008,"msg":"Invalid Api-Key ID."}
+Traceback (most recent call last):
+  File "E:\Server\htdocs\server\algo-trade\test_client.py", line 13, in test_client
+    print("\u274c Could not fetch balance.")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Server\htdocs\server\algo-trade\test_client.py", line 29, in <module>
+    test_client()
+    ~~~~~~~~~~~^^
+  File "E:\Server\htdocs\server\algo-trade\test_client.py", line 15, in test_client
+    print(f"\u274c Error fetching balance: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>

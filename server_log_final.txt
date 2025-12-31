@@ -1,0 +1,35 @@
+INFO:     Started server process [11460]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58800 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Algo Trade Bot API Starting...
+Algo Trade Bot API & WebSocket Relay Started
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61342 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:65112 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Fetching OrderBook for BTC/USDT (limit 15)...
+Binance API Error [400] on /fapi/v1/depth: {"code":-4021,"msg":"15 is not valid depth limit"}
+OrderBook fetch failed or returned None
+INFO:     127.0.0.1:65118 - "GET /orderbook?symbol=BTC/USDT HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:58939 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52763 - "GET /bot/status HTTP/1.1" 200 OK
+Fetching OrderBook for BTC/USDT (limit 15)...
+Binance API Error [400] on /fapi/v1/depth: {"code":-4021,"msg":"15 is not valid depth limit"}
+OrderBook fetch failed or returned None
+INFO:     127.0.0.1:52513 - "GET /orderbook?symbol=BTC/USDT HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50302 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:61708 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54011 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54011 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54011 - "GET /bot/status HTTP/1.1" 200 OK

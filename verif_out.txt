@@ -1,0 +1,26 @@
+DEBUG: API Key starting with: NXme...
+DEBUG: API Secret starting with: bmGw...
+Checking Binance Connection...
+Error fetching balance: binance {"code":-2008,"msg":"Invalid Api-Key ID."}
+Traceback (most recent call last):
+  File "E:\Server\htdocs\server\algo-trade\verify_connection.py", line 17, in verify
+    print("\u26a0\ufe0f Could not fetch Futures balance. Trying SPOT balance...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Server\htdocs\server\algo-trade\verify_connection.py", line 29, in <module>
+    verify()
+    ~~~~~~^^
+  File "E:\Server\htdocs\server\algo-trade\verify_connection.py", line 26, in verify
+    print(f"\u274c ERROR: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>

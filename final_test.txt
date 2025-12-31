@@ -1,0 +1,7 @@
+Testing BinanceClient with Testnet...
+Client initialized in TESTNET mode (demo-fapi).
+Error fetching balance: 'charmap' codec can't encode characters in position 1462-1475: character maps to <undefined>
+OHLCV data fetched!
+            timestamp     open     high      low    close    volume
+3 2025-12-18 09:00:00  86934.9  87350.0  86755.0  87237.0  4381.369
+4 2025-12-18 10:00:00  87236.9  87381.5  87180.0  87363.6   447.445

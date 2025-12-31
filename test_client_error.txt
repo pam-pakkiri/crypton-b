@@ -1,0 +1,8 @@
+Testing BinanceClient with Testnet...
+Client initialized in TESTNET mode.
+Error fetching balance: binance {"code":-2008,"msg":"Invalid Api-Key ID."}
+Could not fetch balance.
+OHLCV data fetched!
+            timestamp     open     high      low    close    volume
+3 2025-12-18 09:00:00  86934.9  87350.0  86755.0  87237.0  4381.369
+4 2025-12-18 10:00:00  87236.9  87248.0  87180.0  87214.9   181.070

@@ -1,0 +1,19 @@
+DEBUG: API Key starts with: 'NXme'
+DEBUG: API Key length: 64
+MATCH: Key in .env matches the screenshot exactly.
+
+Checking Binance Connection...
+
+--- Testing Mainnet Futures ---
+FAILED: Invalid API Key for Mainnet Futures
+
+--- Testing Testnet/Mock Futures ---
+FAILED: binance testnet/sandbox mode is not supported for futures anymore, please check the deprecation anno
+
+--- Testing Mainnet Spot ---
+FAILED: Invalid API Key for Mainnet Spot
+
+--- Testing Testnet Spot ---
+FAILED: binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+
+CONCLUSION: All attempts failed. If it's 'Demo Trade', ensure you are using the specific keys from 'Mock Trading' dashboard on Binance and that you've correctly copied the SECRET key.

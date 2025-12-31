@@ -1,0 +1,74 @@
+INFO:     Started server process [25104]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:61266 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:61477 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:50715 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64846 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64684 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:50259 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:54937 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:61720 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:55733 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:57636 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:61277 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:50060 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:53316 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:52891 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:59830 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:52281 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:52624 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:63822 - "WebSocket /ws" [accepted]
+INFO:     connection open
+Algo Trade Bot API Starting...
+Algo Trade Bot API & WebSocket Relay Started
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57885 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57885 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:57885 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52537 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:54587 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62848 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:50891 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+DEBUG: Bulk Tickers keys: ['ADA/USDT:USDT', 'SOL/USDT:USDT', 'BNB/USDT:USDT', 'LTC/USDT:USDT', 'BTC/USDT:USDT']... (Total: 12)
+DEBUG: Bulk Funding keys: ['FTTUSDT', 'PAXGUSDT', 'ZKCUSDT', 'TUTUSDT', 'BLESSUSDT']... (Total: 670)
+INFO:     127.0.0.1:62858 - "GET /tickers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62848 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59758 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62848 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:62848 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52463 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:59978 - "GET /bot/status HTTP/1.1" 200 OK
+Client initialized in TESTNET mode (sandbox).
+INFO:     127.0.0.1:52120 - "GET /bot/status HTTP/1.1" 200 OK

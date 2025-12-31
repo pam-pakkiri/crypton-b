@@ -1,0 +1,17 @@
+DEBUG: API Key starts with: 'NXme'
+MATCH: Key in .env matches the screenshot exactly.
+
+Checking Binance Connection...
+
+--- Testing Binance Futures (Mock Trading - demo-fapi) ---
+FAILED: binance does not have a testnet/sandbox URL for sapi endpoints
+
+--- Testing Binance Spot (Testnet - binance.vision) ---
+FAILED: binance does not have a testnet/sandbox URL for sapi endpoints
+
+--- Testing Binance Futures (Testnet - binancefuture.com) ---
+FAILED: binance does not have a testnet/sandbox URL for sapi endpoints
+
+CONCLUSION: Still could not connect.
+If these are 'Demo Trade' keys, double-check if you copied them from 'Mock Trading' dashboard.
+Also, ensure 'adjustForTimeDifference' is working (check system time).

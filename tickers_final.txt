@@ -1,0 +1,86 @@
+{
+  "BTC/USDT": {
+    "last": 88807.3,
+    "percentage": 1.504,
+    "high": 90000.0,
+    "low": 86868.7,
+    "funding": 0.0001
+  },
+  "ETH/USDT": {
+    "last": 2974.26,
+    "percentage": 1.693,
+    "high": 2991.37,
+    "low": 2850.0,
+    "funding": 0.0001
+  },
+  "SOL/USDT": {
+    "last": 124.15,
+    "percentage": 1.829,
+    "high": 124.25,
+    "low": 119.51,
+    "funding": 0.0001
+  },
+  "BNB/USDT": {
+    "last": 842.89,
+    "percentage": 0.658,
+    "high": 847.17,
+    "low": 827.08,
+    "funding": 0.0
+  },
+  "XRP/USDT": {
+    "last": 1.8744,
+    "percentage": 0.439,
+    "high": 1.8877,
+    "low": 1.7,
+    "funding": 0.0001
+  },
+  "DOGE/USDT": {
+    "last": 0.12586,
+    "percentage": -0.34,
+    "high": 0.12806,
+    "low": 0.12303,
+    "funding": 9.611E-05
+  },
+  "ADA/USDT": {
+    "last": 0.3568,
+    "percentage": 1.797,
+    "high": 0.3596,
+    "low": 0.3418,
+    "funding": 5.37E-05
+  },
+  "BCH/USDT": {
+    "last": 605.75,
+    "percentage": 2.996,
+    "high": 613.21,
+    "low": 586.53,
+    "funding": -0.00014117
+  },
+  "LTC/USDT": {
+    "last": 77.31,
+    "percentage": 1.43,
+    "high": 77.94,
+    "low": 75.39,
+    "funding": 0.0001
+  },
+  "TRX/USDT": {
+    "last": 0.27866,
+    "percentage": -0.029,
+    "high": 0.28007,
+    "low": 0.2601,
+    "funding": -9.604E-05
+  },
+  "ETC/USDT": {
+    "last": 11.888,
+    "percentage": -0.444,
+    "high": 12.058,
+    "low": 11.609,
+    "funding": -0.00011481
+  },
+  "LINK/USDT": {
+    "last": 12.459,
+    "percentage": 1.822,
+    "high": 12.517,
+    "low": 11.996,
+    "funding": 0.0001
+  }
+}
