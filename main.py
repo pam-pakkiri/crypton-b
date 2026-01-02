@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from typing import List
 from config import BINANCE_API_KEY, BINANCE_API_SECRET, SYMBOL, TIMEFRAME
 from execution.binance_client import BinanceClient
-from execution.binance_client import BinanceClient
+# from execution.binance_client import BinanceClient
 from strategies.smart_futures_strategy import SmartFuturesStrategy
 from strategies.institutional_strategy import InstitutionalStrategy
 from strategies.scalping_strategy import ScalpingStrategy
@@ -38,10 +38,19 @@ class ClosePosition(BaseModel):
 app = FastAPI(title="Algo Trade Bot API")
 
 # Configure CORS to allow requests from the Next.js frontend
-origins = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+import os
+
+# Determine if we are running in production (set PRODUCTION=1 in env)
+IS_PRODUCTION = os.getenv("PRODUCTION", "0") == "1"
+
+# CORS origins – allow only the production domain when in prod, otherwise allow local dev URLs
+if IS_PRODUCTION:
+    origins = ["https://crypton0.com"]
+else:
+    origins = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
 
 app.add_middleware(
     CORSMiddleware,
@@ -61,7 +70,8 @@ _shared_client = None
 def get_shared_client():
     global _shared_client
     if _shared_client is None:
-        _shared_client = BinanceClient(testnet=True)
+        # Use testnet in development, mainnet in production
+        _shared_client = BinanceClient(testnet=not IS_PRODUCTION)
     return _shared_client
 
 class ConnectionManager:
@@ -161,7 +171,7 @@ def init_bot(symbol=SYMBOL, strategy_type="mq5", force_update=False):
         del traders[symbol]
         
     print(f"Initializing components for {symbol} with strategy {strategy_type}...")
-    client = BinanceClient(testnet=True)
+    client = BinanceClient(testnet=not IS_PRODUCTION)
     rm = RiskManager(account_size=15000, risk_per_trade=0.01)
     
     if strategy_type == "institutional":
@@ -266,7 +276,7 @@ def update_config(config: BotConfig):
 
 @app.get("/tickers")
 def get_tickers():
-    client = BinanceClient(testnet=True)
+    client = BinanceClient(testnet=not IS_PRODUCTION)
     symbols = ["BTC/USDT", "ETH/USDT", "SOL/USDT", "BNB/USDT", "XRP/USDT", "DOGE/USDT", "ADA/USDT", "BCH/USDT", "LTC/USDT", "TRX/USDT", "ETC/USDT", "LINK/USDT"]
     all_funding = client.get_all_funding_rates()
     results = {}
@@ -295,7 +305,7 @@ def get_orderbook(symbol: str = "BTC/USDT", limit: int = 20):
         limit = next((x for x in valid_limits if x >= limit), 20)
         
     # Use existing trader client if available, else shared client
-    client = traders[symbol].client if symbol in traders else get_shared_client()
+    client = traders[symbol].client if symbol in traders else get_shared_client()  # unchanged, but will now respect production flag
     
     print(f"Fetching OrderBook for {symbol} (limit {limit})...")
     book = client.get_order_book(symbol, limit)
@@ -308,7 +318,7 @@ def get_orderbook(symbol: str = "BTC/USDT", limit: int = 20):
 
 @app.get("/bot/status")
 def get_bot_status():
-    client = BinanceClient(testnet=True)
+    client = BinanceClient(testnet=not IS_PRODUCTION)
     balance = 0
     assets = []
     positions = []
@@ -429,7 +439,7 @@ def close_specific_position(req: ClosePosition):
 
 @app.get("/history")
 def get_trade_history(symbol: str = "BTC/USDT", limit: int = 50):
-    client = BinanceClient(testnet=True)
+    client = BinanceClient(testnet=not IS_PRODUCTION)
     try:
         # Check if we should use the CCXT exchange or our manual override
         # Since CCXT 4.x deprecates Futures Testnet, we always use our manual method for testnet
@@ -448,7 +458,7 @@ def get_trade_history(symbol: str = "BTC/USDT", limit: int = 50):
 
 @app.get("/klines")
 def get_klines(symbol: str = "BTC/USDT", interval: str = "15m", limit: int = 100):
-    client = BinanceClient(testnet=True)
+    client = BinanceClient(testnet=not IS_PRODUCTION)
     try:
         # fetch_ohlcv returns a Pandas DataFrame with columns: timestamp, open, high, low, close, volume
         df = client.fetch_ohlcv(symbol, timeframe=interval, limit=limit)
