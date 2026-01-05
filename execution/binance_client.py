@@ -168,12 +168,40 @@ class BinanceClient:
                     "last": float(data['lastPrice']),
                     "percentage": float(data['priceChangePercent']),
                     "high": float(data['highPrice']),
-                    "low": float(data['lowPrice'])
+                    "low": float(data['lowPrice']),
+                    "close": float(data['lastPrice']) # Compatibility
                 }
             return None
         except Exception as e:
             print(f"Error in direct ticker fetch for {symbol}: {e}")
             return None
+
+    def round_price(self, symbol, price):
+        """Round price to appropriate decimals based on symbol."""
+        # Standard precisions for major pairs on Binance Futures
+        precisions = {
+            'BTC': 1, 'ETH': 2, 'SOL': 2, 'BNB': 2, 'ADA': 4, 'XRP': 4,
+            'DOGE': 5, 'DOT': 3, 'MATIC': 4, 'LINK': 3, 'BCH': 2, 'LTC': 2,
+            'TRX': 5, 'ETC': 2, 'AVAX': 3, 'UNI': 3, 'ATOM': 3, 'FIL': 3,
+            'LDO': 3, 'OP': 3, 'ARB': 4, 'SUI': 4, 'TIA': 4, 'APT': 3
+        }
+        base = symbol.split('/')[0] if '/' in symbol else symbol.replace('USDT', '')
+        p = precisions.get(base.upper(), 2)
+        return round(float(price), p)
+
+    def round_quantity(self, symbol, quantity):
+        """Round quantity to appropriate decimals based on symbol."""
+        precisions = {
+            'BTC': 3, 'ETH': 3, 'SOL': 2, 'BNB': 2, 'ADA': 0, 'XRP': 1,
+            'DOGE': 0, 'DOT': 1, 'MATIC': 0, 'LINK': 2, 'BCH': 3, 'LTC': 3,
+            'TRX': 0, 'ETC': 2, 'AVAX': 2, 'UNI': 2, 'ATOM': 2, 'FIL': 1,
+            'LDO': 1, 'OP': 1, 'ARB': 1, 'SUI': 1, 'TIA': 1, 'APT': 1
+        }
+        base = symbol.split('/')[0] if '/' in symbol else symbol.replace('USDT', '')
+        p = precisions.get(base.upper(), 1) # Default to 1 decimal for qty
+        if p == 0:
+            return int(quantity)
+        return round(float(quantity), p)
 
     def create_order(self, symbol, type, side, amount, price=None, params={}):
         try:
@@ -183,9 +211,10 @@ class BinanceClient:
                 "symbol": b_symbol,
                 "side": side.upper(),
                 "type": type.upper(),
-                "quantity": amount
+                "quantity": self.round_quantity(symbol, amount)
             }
             if price:
+                price = self.round_price(symbol, price)
                 data["price"] = price
             
             # Special handling for LIMIT orders: timeInForce is MANDATORY on Binance Futures
@@ -194,6 +223,9 @@ class BinanceClient:
                 
             # Merge additional params (like stopPrice, reduceOnly)
             if params:
+                # Ensure stopPrice is rounded if present
+                if 'stopPrice' in params:
+                    params['stopPrice'] = self.round_price(symbol, params['stopPrice'])
                 data.update(params)
                 
             response = self._request('POST', "/fapi/v1/order", data)

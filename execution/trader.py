@@ -139,6 +139,11 @@ class LiveTrader:
             oid = order.get('orderId') or order.get('id')
             print(f"Entry Order Filled: {oid}")
             
+            # Use Fallback ATR if 0 to ensure exit orders are placed
+            effective_atr = signal_dict.get('atr', 0)
+            if effective_atr == 0:
+                effective_atr = price * 0.02 # 2% fallback
+            
             # 3. Place Stop Loss (Trigger Order)
             if sl_price:
                 sl_side = 'sell' if side == 'buy' else 'buy'
@@ -152,35 +157,47 @@ class LiveTrader:
                     self.active_sl_order_id = sl_res.get('orderId') or sl_res.get('id')
                 
             # 4. Place Take Profits (Multiple levels)
-            import math
-            tps = [signal_dict.get('tp1'), signal_dict.get('tp2'), signal_dict.get('tp3')]
-            valid_tps = [tp for tp in tps if tp is not None]
-            
-            if valid_tps:
-                tp_side = 'sell' if side == 'buy' else 'buy'
-                num_tps = len(valid_tps)
-                precision = len(str(step_size).split('.')[-1]) if '.' in str(step_size) else 0
-                
-                # Distribution logic: Prefer closer TPs if size is small
-                total_units = int(round(size / step_size, 0))
-                units_per_tp = total_units // num_tps
-                extra_units = total_units % num_tps
-                
-                for idx, tp_price in enumerate(valid_tps):
-                    tp_units = units_per_tp + (1 if idx < extra_units else 0)
-                    tp_qty = round(tp_units * step_size, precision)
-                    
-                    if tp_qty > 0:
-                        print(f"Placing Take Profit {idx+1} at {tp_price} for {tp_qty} (reduceOnly)...")
-                        self.client.create_order(
-                            self.symbol, 'limit', tp_side, tp_qty, 
-                            price=tp_price, 
-                            params={'reduceOnly': 'true'}
-                        )
-            else:
-                 print("No Take Profit levels provided by strategy.")
+            self.place_tp_orders(side, size, signal_dict, price, effective_atr)
         else:
             print("Order Placement Failed.")
+
+    def place_tp_orders(self, side, total_size, signal_dict, price, atr):
+        import math
+        tps = [signal_dict.get('tp1'), signal_dict.get('tp2'), signal_dict.get('tp3')]
+        valid_tps = [tp for tp in tps if tp is not None]
+        
+        # If no TPs provided but we have ATR, calculate them manually
+        if not valid_tps and atr > 0:
+            tp_mults = getattr(self.strategy, 'tp_atr_multipliers', [2, 3, 4])
+            stops = self.rm.get_stop_targets(price, atr, side, tp_multipliers=tp_mults)
+            valid_tps = [stops.get('tp1'), stops.get('tp2'), stops.get('tp3')]
+            valid_tps = [tp for tp in valid_tps if tp is not None]
+
+        if valid_tps:
+            tp_side = 'sell' if side == 'buy' else 'buy'
+            num_tps = len(valid_tps)
+            step_size = getattr(self.strategy, 'quantity_step', 0.001)
+            precision = len(str(step_size).split('.')[-1]) if '.' in str(step_size) else 0
+            
+            total_units = int(round(total_size / step_size, 0))
+            if total_units <= 0: return
+            
+            units_per_tp = total_units // num_tps
+            extra_units = total_units % num_tps
+            
+            for idx, tp_price in enumerate(valid_tps):
+                tp_units = units_per_tp + (1 if idx < extra_units else 0)
+                tp_qty = round(tp_units * step_size, precision)
+                
+                if tp_qty > 0:
+                    print(f"Placing Take Profit {idx+1} at {tp_price} for {tp_qty} (reduceOnly)...")
+                    self.client.create_order(
+                        self.symbol, 'limit', tp_side, tp_qty, 
+                        price=tp_price, 
+                        params={'reduceOnly': 'true'}
+                    )
+        else:
+             print("No Take Profit levels available to place.")
 
     def manage_active_positions(self, current_price, current_atr):
         """
@@ -255,17 +272,9 @@ class LiveTrader:
             # --- 3. Take Profit (Self-healing) ---
             if not tp_orders:
                 print(f"No active TP found for {self.symbol}. Creating recovery TP...")
-                # Re-calculate TPs using strategy multipliers
-                tp_mults = getattr(self.strategy, 'tp_atr_multipliers', [2, 3, 4])
-                stops = self.rm.get_stop_targets(entry_price, current_atr, side, tp_multipliers=tp_mults)
-                
-                tp_side = 'sell' if side == 'long' else 'buy'
-                # Place at least the primary TP
-                tp1 = stops.get('tp1')
-                step_size = getattr(self.strategy, 'quantity_step', 0.001)
-                if tp1:
-                    print(f"Placing Recovery TP at {tp1}...")
-                    self.client.create_order(self.symbol, 'LIMIT', tp_side, size, price=tp1, params={'reduceOnly': 'true'})
+                self.place_tp_orders(side, size, {}, entry_price, current_atr)
 
         except Exception as e:
-            print(f"Error in position management: {e}")
+            print(f"Critical Error in position management for {self.symbol}: {e}")
+            import traceback
+            traceback.print_exc()
