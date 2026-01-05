@@ -50,13 +50,14 @@ class RiskManager:
             sl = entry_price - (mult * atr) if side == 'long' else entry_price + (mult * atr)
         stops['sl'] = sl
         # Take Profits
-        risk = abs(entry_price - sl)
         tp_mults = tp_multipliers if tp_multipliers is not None else [2, 3, 4]
         for idx, m in enumerate(tp_mults, start=1):
+            # ATR Method: Target is a multiple of ATR from entry
+            dist = m * atr
             if side == 'long':
-                stops[f'tp{idx}'] = entry_price + (m * risk)
+                stops[f'tp{idx}'] = entry_price + dist
             else:
-                stops[f'tp{idx}'] = entry_price - (m * risk)
+                stops[f'tp{idx}'] = entry_price - dist
         return stops
 
     def check_trailing_stop(self, current_price, current_sl, side, trail_amount, trail_step):

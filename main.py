@@ -427,7 +427,7 @@ def close_specific_position(req: ClosePosition):
             type="market",
             side=side,
             amount=abs_amount,
-            reduce_only=True
+            params={'reduceOnly': 'true'}
         )
         if order:
             return {"status": "success", "order": order}

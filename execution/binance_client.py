@@ -188,7 +188,11 @@ class BinanceClient:
             if price:
                 data["price"] = price
             
-            # Merge additional params (like stopPrice)
+            # Special handling for LIMIT orders: timeInForce is MANDATORY on Binance Futures
+            if type.upper() == 'LIMIT' and 'timeInForce' not in params:
+                data['timeInForce'] = 'GTC'
+                
+            # Merge additional params (like stopPrice, reduceOnly)
             if params:
                 data.update(params)
                 

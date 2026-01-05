@@ -21,7 +21,6 @@ class LiveTrader:
         self.trailing_step_atr_mult = 0.5 # Step in ATR
         self.use_breakeven = True
         self.breakeven_trigger_atr_mult = 2.0 # Profit in ATR to trigger BE
-        self.breakeven_trigger_atr_mult = 2.0 # Profit in ATR to trigger BE
         self.active_sl_order_id = None # Track the current SL order to replace it
         self.last_atr = 0.0
 
@@ -124,7 +123,7 @@ class LiveTrader:
                     print(f"Opposite signal detected ({signal}). Closing existing {current_side.upper()} position.")
                     # Close existing position
                     close_side = 'sell' if current_side == 'buy' else 'buy'
-                    self.client.create_order(self.symbol, 'market', close_side, abs(float(current_p['size'])))
+                    self.client.create_order(self.symbol, 'market', close_side, abs(float(current_p['size'])), params={'reduceOnly': 'true'})
                     # Cancel all open orders for this symbol
                     self.client.cancel_all_orders(self.symbol)
                 else:
@@ -143,17 +142,43 @@ class LiveTrader:
             # 3. Place Stop Loss (Trigger Order)
             if sl_price:
                 sl_side = 'sell' if side == 'buy' else 'buy'
-                params = {'stopPrice': sl_price}
-                print(f"Placing initial Stop Loss at {sl_price}...")
+                params = {
+                    'stopPrice': sl_price,
+                    'reduceOnly': 'true'
+                }
+                print(f"Placing initial Stop Loss at {sl_price} (reduceOnly)...")
                 sl_res = self.client.create_order(self.symbol, 'stop_market', sl_side, size, params=params)
                 if sl_res:
                     self.active_sl_order_id = sl_res.get('orderId') or sl_res.get('id')
                 
-            # 4. Place Take Profit (Limit Order)
-            if tp1_price:
+            # 4. Place Take Profits (Multiple levels)
+            import math
+            tps = [signal_dict.get('tp1'), signal_dict.get('tp2'), signal_dict.get('tp3')]
+            valid_tps = [tp for tp in tps if tp is not None]
+            
+            if valid_tps:
                 tp_side = 'sell' if side == 'buy' else 'buy'
-                print(f"Placing Take Profit at {tp1_price}...")
-                self.client.create_order(self.symbol, 'limit', tp_side, size, price=tp1_price)
+                num_tps = len(valid_tps)
+                precision = len(str(step_size).split('.')[-1]) if '.' in str(step_size) else 0
+                
+                # Distribution logic: Prefer closer TPs if size is small
+                total_units = int(round(size / step_size, 0))
+                units_per_tp = total_units // num_tps
+                extra_units = total_units % num_tps
+                
+                for idx, tp_price in enumerate(valid_tps):
+                    tp_units = units_per_tp + (1 if idx < extra_units else 0)
+                    tp_qty = round(tp_units * step_size, precision)
+                    
+                    if tp_qty > 0:
+                        print(f"Placing Take Profit {idx+1} at {tp_price} for {tp_qty} (reduceOnly)...")
+                        self.client.create_order(
+                            self.symbol, 'limit', tp_side, tp_qty, 
+                            price=tp_price, 
+                            params={'reduceOnly': 'true'}
+                        )
+            else:
+                 print("No Take Profit levels provided by strategy.")
         else:
             print("Order Placement Failed.")
 
@@ -175,77 +200,72 @@ class LiveTrader:
             side = 'long' if float(pos['size']) > 0 else 'short'
             entry_price = float(pos['entryPrice'])
             
-            # Fetch current SL order
+            # 1. Fetch current orders
             open_orders = self.client.get_open_orders(self.symbol)
-            sl_order = next((o for o in open_orders if o.get('type') == 'STOP_MARKET'), None)
+            sl_orders = [o for o in open_orders if o.get('type') == 'STOP_MARKET']
+            tp_orders = [o for o in open_orders if o.get('type') == 'LIMIT']
             
-            # If no SL exists, create an initial one (Self-healing)
+            # --- 2. Stop Loss (Self-healing & Management) ---
+            sl_order = sl_orders[0] if sl_orders else None
+            
             if not sl_order:
                 print(f"No active SL found for {self.symbol}. Creating initial SL protection...")
-                
-                # Default SL calculation
                 if current_atr > 0:
                     sl_dist = current_atr * 2.0
                 else:
-                    # Fallback to 2% if ATR not ready
                     sl_dist = entry_price * 0.02
                     
                 initial_sl = entry_price - sl_dist if side == 'long' else entry_price + sl_dist
                 initial_sl = round(initial_sl, 2)
                 
-                print(f"Calculated Initial SL: {initial_sl} (Entry: {entry_price}, ATR: {current_atr})")
-                
                 sl_side = 'sell' if side == 'long' else 'buy'
-                
-                # IMPORTANT: Set reduceOnly to true for SL closing orders
-                params = {
-                    'stopPrice': initial_sl,
-                    'reduceOnly': 'true'
-                }
-                
+                params = {'stopPrice': initial_sl, 'reduceOnly': 'true'}
                 res = self.client.create_order(self.symbol, 'STOP_MARKET', sl_side, size, params=params)
                 if res:
                     print(f"Initial SL Order Created: {res.get('orderId')}")
-                    self.active_sl_order_id = res.get('orderId')
                     sl_order = res
                     sl_order['stopPrice'] = initial_sl 
-                else:
-                    print("Failed to create Initial SL.")
-                    return
-
-            current_sl = float(sl_order.get('stopPrice', 0))
-            self.active_sl_order_id = sl_order.get('orderId')
             
-            new_sl = None
+            if sl_order:
+                current_sl = float(sl_order.get('stopPrice', 0))
+                self.active_sl_order_id = sl_order.get('orderId')
+                
+                new_sl = None
+                if self.use_breakeven:
+                    be_trigger = current_atr * self.breakeven_trigger_atr_mult
+                    be_sl = self.rm.check_breakeven(current_price, entry_price, current_sl, side, be_trigger)
+                    if be_sl: new_sl = be_sl
 
-            # 1. Check Breakeven
-            if self.use_breakeven:
-                be_trigger = current_atr * self.breakeven_trigger_atr_mult
-                be_sl = self.rm.check_breakeven(current_price, entry_price, current_sl, side, be_trigger)
-                if be_sl:
-                    new_sl = be_sl
-                    print(f"Breakeven triggered! Moving SL to {new_sl}")
+                if self.use_trailing_stop:
+                    trail_amt = current_atr * self.trailing_stop_atr_mult
+                    trail_step = current_atr * self.trailing_step_atr_mult
+                    ts_sl = self.rm.check_trailing_stop(current_price, current_sl, side, trail_amt, trail_step)
+                    if ts_sl:
+                        if not new_sl or (side == 'long' and ts_sl > new_sl) or (side == 'short' and ts_sl < new_sl):
+                            new_sl = ts_sl
 
-            # 2. Check Trailing Stop (Only if BE didn't just trigger or it's even better)
-            if self.use_trailing_stop:
-                trail_amt = current_atr * self.trailing_stop_atr_mult
-                trail_step = current_atr * self.trailing_step_atr_mult
-                ts_sl = self.rm.check_trailing_stop(current_price, current_sl, side, trail_amt, trail_step)
-                if ts_sl:
-                    if not new_sl or (side == 'long' and ts_sl > new_sl) or (side == 'short' and ts_sl < new_sl):
-                        new_sl = ts_sl
-                        print(f"Trailing Stop triggered! Moving SL to {new_sl}")
+                if new_sl:
+                    print(f"Updating SL for {self.symbol} to {new_sl}...")
+                    self.client.cancel_order(self.symbol, self.active_sl_order_id)
+                    sl_side = 'sell' if side == 'long' else 'buy'
+                    params = {'stopPrice': new_sl, 'reduceOnly': 'true'}
+                    res = self.client.create_order(self.symbol, 'STOP_MARKET', sl_side, size, params=params)
+                    if res: self.active_sl_order_id = res.get('orderId')
 
-            # 3. Apply New SL if updated
-            if new_sl:
-                print(f"Updating SL order for {self.symbol} from {current_sl} to {new_sl}")
-                # Cancel old SL
-                self.client.cancel_order(self.symbol, self.active_sl_order_id)
-                # Place new SL
-                sl_side = 'sell' if side == 'long' else 'buy'
-                params = {'stopPrice': new_sl}
-                res = self.client.create_order(self.symbol, 'stop_market', sl_side, size, params=params)
-                if res:
-                    self.active_sl_order_id = res.get('orderId')
+            # --- 3. Take Profit (Self-healing) ---
+            if not tp_orders:
+                print(f"No active TP found for {self.symbol}. Creating recovery TP...")
+                # Re-calculate TPs using strategy multipliers
+                tp_mults = getattr(self.strategy, 'tp_atr_multipliers', [2, 3, 4])
+                stops = self.rm.get_stop_targets(entry_price, current_atr, side, tp_multipliers=tp_mults)
+                
+                tp_side = 'sell' if side == 'long' else 'buy'
+                # Place at least the primary TP
+                tp1 = stops.get('tp1')
+                step_size = getattr(self.strategy, 'quantity_step', 0.001)
+                if tp1:
+                    print(f"Placing Recovery TP at {tp1}...")
+                    self.client.create_order(self.symbol, 'LIMIT', tp_side, size, price=tp1, params={'reduceOnly': 'true'})
+
         except Exception as e:
             print(f"Error in position management: {e}")
