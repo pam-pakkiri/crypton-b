@@ -15,12 +15,12 @@ class LiveTrader:
         self.running = False 
         self.leverage = 5
         self.margin_mode = 'isolated'
-        # Management Config (from MQ5)
+        # Management Config (More Protective Defaults)
         self.use_trailing_stop = True
-        self.trailing_stop_atr_mult = 1.5 # Distance in ATR
-        self.trailing_step_atr_mult = 0.5 # Step in ATR
+        self.trailing_stop_atr_mult = 1.0 # Tighter distance in ATR
+        self.trailing_step_atr_mult = 0.5 # Step remains 0.5x ATR
         self.use_breakeven = True
-        self.breakeven_trigger_atr_mult = 2.0 # Profit in ATR to trigger BE
+        self.breakeven_trigger_atr_mult = 1.1 # Lock entry earlier at 1.1x ATR
         self.active_sl_order_id = None # Track the current SL order to replace it
         self.last_atr = 0.0
 
