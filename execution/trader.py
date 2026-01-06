@@ -203,6 +203,10 @@ class LiveTrader:
         """
         Monitors active positions and updates SL for trailing or breakeven.
         """
+        # Safety Floor for ATR (min 0.05% of price) to prevent jumping triggers
+        if current_atr < current_price * 0.0005:
+            current_atr = current_price * 0.0005
+            
         self.last_atr = current_atr
         try:
             exchange_pos = self.client.get_positions()
@@ -246,20 +250,23 @@ class LiveTrader:
             if sl_order:
                 current_sl = float(sl_order.get('stopPrice', 0))
                 self.active_sl_order_id = sl_order.get('orderId')
-                
                 new_sl = None
                 if self.use_breakeven:
                     be_trigger = current_atr * self.breakeven_trigger_atr_mult
                     be_sl = self.rm.check_breakeven(current_price, entry_price, current_sl, side, be_trigger)
-                    if be_sl: new_sl = be_sl
+                    if be_sl:
+                        new_sl = be_sl
+                        print(f"[{self.symbol}] BREAKEVEN TRIGGERED: Moving SL to {new_sl}")
 
                 if self.use_trailing_stop:
                     trail_amt = current_atr * self.trailing_stop_atr_mult
                     trail_step = current_atr * self.trailing_step_atr_mult
                     ts_sl = self.rm.check_trailing_stop(current_price, current_sl, side, trail_amt, trail_step)
                     if ts_sl:
+                        # Only update if TS is better than BE or if BE wasn't triggered
                         if not new_sl or (side == 'long' and ts_sl > new_sl) or (side == 'short' and ts_sl < new_sl):
                             new_sl = ts_sl
+                            print(f"[{self.symbol}] TRAILING STOP TRIGGERED: Moving SL to {new_sl}")
 
                 if new_sl:
                     print(f"Updating SL for {self.symbol} to {new_sl}...")
