@@ -1,1 +1,15 @@
- 
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+*.log
+server_log*.txt
+trade_*.txt
+verif_*.txt
+tickers_*.txt
+final_*.txt
+debug_*.json
+capture_verbose.py
+test_*.txt
+node_modules/
+.vscode/
