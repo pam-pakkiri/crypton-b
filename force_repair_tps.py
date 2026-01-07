@@ -8,8 +8,13 @@ def force_repair():
     rm = RiskManager(account_size=15000, risk_per_trade=0.01)
     strategy = SmartFuturesStrategy(risk_manager=rm)
     
-    # Symbols from image
-    symbols = ["ETH/USDT", "BCH/USDT", "BTC/USDT"]
+    # All currently active positions or known symbols
+    symbols = []
+    try:
+        positions = client.get_positions()
+        symbols = [p['symbol'].replace('USDT', '/USDT') if 'USDT' in p['symbol'] and '/' not in p['symbol'] else p['symbol'] for p in positions]
+    except:
+        symbols = ["ETH/USDT", "BNB/USDT", "BTC/USDT", "LTC/USDT"]
     
     print("Starting Force Repair for Take Profit levels...")
     

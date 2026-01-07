@@ -441,17 +441,27 @@ def close_specific_position(req: ClosePosition):
 def get_trade_history(symbol: str = "BTC/USDT", limit: int = 50):
     client = BinanceClient(testnet=not IS_PRODUCTION)
     try:
-        # Check if we should use the CCXT exchange or our manual override
-        # Since CCXT 4.x deprecates Futures Testnet, we always use our manual method for testnet
-        if client.testnet:
-             return client.get_trade_history_manual(symbol, limit)
-             
-        # For mainnet, we can still use CCXT if preferred, but for consistency let's stick to manual if it works
-        # But keeping CCXT fallback if needed:
-        if hasattr(client, 'exchange'):
-             return client.exchange.fetch_my_trades(symbol, limit=limit)
-             
-        return []
+        # If symbol is "all" or empty, gather history for active pairs
+        symbols = [symbol]
+        if not symbol or symbol.lower() == "all":
+            try:
+                pos = client.get_positions()
+                symbols = [p['symbol'].replace('USDT', '/USDT') if 'USDT' in p['symbol'] and '/' not in p['symbol'] else p['symbol'] for p in pos]
+                if not symbols:
+                    symbols = ["BTC/USDT", "ETH/USDT", "SOL/USDT", "BNB/USDT"]
+            except:
+                symbols = ["BTC/USDT", "ETH/USDT"]
+        
+        all_trades = []
+        # Support both slashed and non-slashed symbols by uniqueness
+        for s in set(symbols):
+            trades = client.get_trade_history_manual(s, limit)
+            if trades:
+                all_trades.extend(trades)
+        
+        # Sort and trim
+        all_trades.sort(key=lambda x: x['timestamp'], reverse=True)
+        return all_trades[:limit]
     except Exception as e:
         print(f"History fetch error: {e}")
         return []

@@ -1,0 +1,43 @@
+Client initialized in TESTNET mode (sandbox).
+Fetching positions...
+
+--- ETHUSDT ---
+Side: SHORT, Size: -0.848
+Entry: 3239.99, Mark: 3236.65
+Fetching open orders...
+SL Orders: 1
+  ID: 7969460107, Price: 3263.09
+TP Orders: 3
+  ID: 7969461232, Price: 3117.85, Qty: 0.282, reduceOnly: True
+  ID: 7969460531, Price: 3178.92, Qty: 0.283, reduceOnly: True
+  ID: 7969460911, Price: 3148.38, Qty: 0.283, reduceOnly: True
+
+--- BNBUSDT ---
+Side: SHORT, Size: -5.55
+Entry: 912.6, Mark: 913.41811364
+Fetching open orders...
+SL Orders: 1
+  ID: 1128194423, Price: 920.210
+TP Orders: 3
+  ID: 1128194490, Price: 892.340, Qty: 1.85, reduceOnly: True
+  ID: 1128194459, Price: 897.410, Qty: 1.85, reduceOnly: True
+  ID: 1128194436, Price: 902.480, Qty: 1.85, reduceOnly: True
+
+--- LTCUSDT ---
+Side: SHORT, Size: -40.524
+Entry: 83.65, Mark: 83.72
+Fetching open orders...
+SL Orders: 1
+  ID: 909215503, Price: 84.82
+TP Orders: 0
+
+--- BTCUSDT ---
+Side: SHORT, Size: -0.08
+Entry: 93729.3, Mark: 93771.1
+Fetching open orders...
+SL Orders: 1
+  ID: 11425851663, Price: 94210.60
+TP Orders: 3
+  ID: 11423952754, Price: 91843.40, Qty: 0.027, reduceOnly: True
+  ID: 11423951254, Price: 92472, Qty: 0.027, reduceOnly: True
+  ID: 11423954278, Price: 91214.80, Qty: 0.026, reduceOnly: True

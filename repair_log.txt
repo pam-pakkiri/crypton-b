@@ -1,0 +1,18 @@
+Client initialized in TESTNET mode (sandbox).
+Starting Force Repair for Take Profit levels...
+
+Repairing ETH/USDT...
+  Current ATR: 12.493571428571515
+  TP already exists for ETH/USDT.
+
+Repairing BNB/USDT...
+  Current ATR: 1.5942857142856934
+  TP already exists for BNB/USDT.
+
+Repairing LTC/USDT...
+  Current ATR: 0.18642857142857036
+  TP already exists for LTC/USDT.
+
+Repairing BTC/USDT...
+  Current ATR: 212.02142857142877
+  TP already exists for BTC/USDT.
