@@ -20,8 +20,9 @@ class LiveTrader:
         self.trailing_stop_atr_mult = 1.0 # Tighter distance in ATR
         self.trailing_step_atr_mult = 0.5 # Step remains 0.5x ATR
         self.use_breakeven = True
-        self.breakeven_trigger_atr_mult = 1.1 # Lock entry earlier at 1.1x ATR
+        self.breakeven_trigger_atr_mult = 1.5 # Lock entry later at 1.5x ATR (was 1.1)
         self.active_sl_order_id = None # Track the current SL order to replace it
+        self.max_concurrent_positions = 3 # Limit total active trades to reduce correlation risk
         self.last_atr = 0.0
 
     def start(self, interval=60):
@@ -111,10 +112,13 @@ class LiveTrader:
         # 2. Execute Entry
         side = 'buy' if signal == 'BUY' else 'sell'
         
-        # Fetch current position from exchange to manage opposite signals
+        # Fetch current position from exchange to manage opposite signals and total exposure
         try:
             exchange_pos = self.client.get_positions()
             symbol_nopslash = self.symbol.replace('/', '')
+            
+            # 1.1 Check total active positions across all symbols
+            active_count = len([p for p in exchange_pos if float(p['size']) != 0])
             current_p = next((p for p in exchange_pos if p['symbol'] == symbol_nopslash), None)
             
             if current_p and float(current_p['size']) != 0:
@@ -126,9 +130,13 @@ class LiveTrader:
                     self.client.create_order(self.symbol, 'market', close_side, abs(float(current_p['size'])), params={'reduceOnly': 'true'})
                     # Cancel all open orders for this symbol
                     self.client.cancel_all_orders(self.symbol)
+                    # We continue to allow entry into the NEW side
                 else:
                     print(f"Already have a {current_side.upper()} position in {self.symbol}. Skipping entry.")
                     return
+            elif active_count >= self.max_concurrent_positions:
+                print(f"Max concurrent positions ({self.max_concurrent_positions}) reached. Skipping entry for {self.symbol}.")
+                return
         except Exception as e:
             print(f"Note on position check: {e}")
 
@@ -214,6 +222,9 @@ class LiveTrader:
             pos = next((p for p in exchange_pos if p['symbol'] == symbol_nopslash), None)
             
             if not pos or float(pos['size']) == 0:
+                if self.active_sl_order_id or tp_orders:
+                    print(f"Position closed for {self.symbol}. Cleaning up residual orders...")
+                    self.client.cancel_all_orders(self.symbol)
                 self.active_sl_order_id = None
                 return
 

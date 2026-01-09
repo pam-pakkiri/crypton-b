@@ -172,7 +172,21 @@ def init_bot(symbol=SYMBOL, strategy_type="mq5", force_update=False):
         
     print(f"Initializing components for {symbol} with strategy {strategy_type}...")
     client = BinanceClient(testnet=not IS_PRODUCTION)
-    rm = RiskManager(account_size=15000, risk_per_trade=0.01)
+    
+    # Try to fetch actual balance for RiskManager, but fallback safely
+    try:
+        initial_balance = 0
+        bal_data = client.get_balance()
+        if bal_data and 'total' in bal_data:
+            initial_balance = bal_data['total'].get('USDT', 0)
+        
+        # If still 0 or None, use a more conservative fallback
+        if initial_balance <= 0:
+            initial_balance = 1000.0 # Better default than 15000
+    except:
+        initial_balance = 1000.0
+
+    rm = RiskManager(account_size=initial_balance, risk_per_trade=0.01)
     
     if strategy_type == "institutional":
         strategy = InstitutionalStrategy(risk_manager=rm)
@@ -234,6 +248,10 @@ def start_bot(background_tasks: BackgroundTasks, config: BotConfig = None):
     
     trader = init_bot(symbol, strategy_type, force_update=force_update)
     
+    # Check if ALREADY running to avoid spanning another thread
+    if trader.running:
+         return {"status": "already_running", "symbol": symbol}
+         
     # Update numerical params
     if config:
         trader.leverage = config.leverage
@@ -241,12 +259,12 @@ def start_bot(background_tasks: BackgroundTasks, config: BotConfig = None):
         trader.rm.risk_per_trade = config.risk_per_trade
         trader.trade_amount = config.trade_amount
 
+    # Mark as running BEFORE thread start to avoid race conditions
+    trader.running = True
+
     def run_trader():
         trader.start(interval=60)
     
-    # If thread exists, it will naturally die as 'running' flag is checked inside loop? 
-    # Actually trader.start() is a loop. We stopped previous trader so its loop should exit.
-    # We must ensure new thread starts.
     thread = threading.Thread(target=run_trader, daemon=True)
     bot_threads[symbol] = thread
     thread.start()

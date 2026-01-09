@@ -7,7 +7,7 @@ from execution.risk_manager import RiskManager
 
 class SmartFuturesStrategy(BaseStrategy):
     def __init__(self, risk_manager: RiskManager, swing_window: int = 50, min_trade_interval_minutes: int = 240,
-                 tp_atr_multipliers: list = [2, 3, 4], sl_atr_multiplier: float = 1.5,
+                 tp_atr_multipliers: list = [2.0, 4.0, 6.0], sl_atr_multiplier: float = 2.0,
                  quantity_step: float = 0.001, bars_for_signal: int = 2,
                  rsi_overbought: int = 70, rsi_oversold: int = 30):
         super().__init__("SmartFuturesStrategy")
@@ -130,31 +130,39 @@ class SmartFuturesStrategy(BaseStrategy):
 
         # LONG Logic
         if buy_cross or rsi_bullish_swing:
-            # RSI Confirmation: Not overbought
-            if c_rsi < self.rsi_overbought:
-                signal = 'BUY'
-                if is_high_vol or rsi_bullish_swing:
-                    weight = 1.0
-                    reason.append(f"BUY: Momentum swing detected ({'RSI bounce' if rsi_bullish_swing else 'EMA cross'}) + High Vol.")
+            # TREND FILTER: Price must be above EMA 200 for Long
+            if c_price > c_ema200:
+                # RSI Confirmation: Not overbought
+                if c_rsi < self.rsi_overbought:
+                    signal = 'BUY'
+                    if is_high_vol or rsi_bullish_swing:
+                        weight = 1.0
+                        reason.append(f"BUY: Momentum swing detected ({'RSI bounce' if rsi_bullish_swing else 'EMA cross'}) + High Vol.")
+                    else:
+                        weight = 0.5
+                        reason.append(f"BUY: Trend confirmed. (EMA 9/21 cross)")
                 else:
-                    weight = 0.5
-                    reason.append(f"BUY: Trend confirmed. (EMA 9/21 cross)")
+                    reason.append(f"Buy setup ignored: RSI ({c_rsi:.2f}) overbought.")
             else:
-                reason.append(f"Buy setup ignored: RSI ({c_rsi:.2f}) overbought.")
+                 reason.append(f"Buy setup ignored: Price ({c_price:.2f}) below EMA 200 filter.")
                  
         # SHORT Logic
         elif sell_cross or rsi_bearish_swing:
-            # RSI Confirmation: Not oversold
-            if c_rsi > self.rsi_oversold:
-                signal = 'SELL'
-                if is_high_vol or rsi_bearish_swing:
-                    weight = 1.0
-                    reason.append(f"SELL: Momentum swing detected ({'RSI drop' if rsi_bearish_swing else 'EMA cross'}) + High Vol.")
+            # TREND FILTER: Price must be below EMA 200 for Short
+            if c_price < c_ema200:
+                # RSI Confirmation: Not oversold
+                if c_rsi > self.rsi_oversold:
+                    signal = 'SELL'
+                    if is_high_vol or rsi_bearish_swing:
+                        weight = 1.0
+                        reason.append(f"SELL: Momentum swing detected ({'RSI drop' if rsi_bearish_swing else 'EMA cross'}) + High Vol.")
+                    else:
+                        weight = 0.5
+                        reason.append(f"SELL: Trend confirmed. (EMA 9/21 cross)")
                 else:
-                    weight = 0.5
-                    reason.append(f"SELL: Trend confirmed. (EMA 9/21 cross)")
+                    reason.append(f"Sell setup ignored: RSI ({c_rsi:.2f}) oversold.")
             else:
-                reason.append(f"Sell setup ignored: RSI ({c_rsi:.2f}) oversold.")
+                 reason.append(f"Sell setup ignored: Price ({c_price:.2f}) above EMA 200 filter.")
 
         if signal == 'HOLD' and not reason:
             reason.append("Searching for swing transition...")

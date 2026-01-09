@@ -43,19 +43,17 @@ class BinanceClient:
         return int(time.time() * 1000)
 
     def _request(self, method, endpoint, params={}):
-        """Helper to call Binance Futures Testnet API directly."""
-        if not self.testnet:
-             return None
-             
-        base_url = "https://testnet.binancefuture.com"
+        """Helper to call Binance Futures API directly."""
+        if self.testnet:
+             base_url = "https://testnet.binancefuture.com"
+        else:
+             base_url = "https://fapi.binance.com"
         
-        # Fixed: Calculate offset once or periodically
-        # For simplicity in this direct helper, we'll use a conservative recvWindow
-        # and ensure the timestamp is fresh.
+        # Calculate server time or use current time
         server_time = self.get_server_time()
         timestamp = server_time
         
-        # Build query string with larger recvWindow
+        # Build query string with recvWindow
         query_params = {**params, "timestamp": timestamp, "recvWindow": 10000}
         query_string = "&".join([f"{k}={v}" for k, v in query_params.items()])
         
