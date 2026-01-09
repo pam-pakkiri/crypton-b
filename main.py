@@ -12,6 +12,7 @@ from execution.binance_client import BinanceClient
 from strategies.smart_futures_strategy import SmartFuturesStrategy
 from strategies.institutional_strategy import InstitutionalStrategy
 from strategies.scalping_strategy import ScalpingStrategy
+from strategies.mq5_fixed_strategy import CryptoMAFixedStrategy
 from execution.risk_manager import RiskManager
 from execution.trader import LiveTrader
 
@@ -158,7 +159,8 @@ def init_bot(symbol=SYMBOL, strategy_type="mq5", force_update=False):
         target_strat_map = {
             "mq5": "SmartFuturesStrategy",
             "institutional": "InstitutionalStrategy",
-            "scalping": "ScalpingStrategy"
+            "scalping": "ScalpingStrategy",
+            "mq5_crypto": "CryptoMAFixedStrategy"
         }
         target_name = target_strat_map.get(strategy_type, "SmartFuturesStrategy")
         
@@ -192,6 +194,8 @@ def init_bot(symbol=SYMBOL, strategy_type="mq5", force_update=False):
         strategy = InstitutionalStrategy(risk_manager=rm)
     elif strategy_type == "scalping":
         strategy = ScalpingStrategy(risk_manager=rm)
+    elif strategy_type == "mq5_crypto":
+        strategy = CryptoMAFixedStrategy(risk_manager=rm)
     else:
         strategy = SmartFuturesStrategy(risk_manager=rm)
         
@@ -236,7 +240,8 @@ def start_bot(background_tasks: BackgroundTasks, config: BotConfig = None):
         target_strat_map = {
             "mq5": "SmartFuturesStrategy",
             "institutional": "InstitutionalStrategy",
-            "scalping": "ScalpingStrategy"
+            "scalping": "ScalpingStrategy",
+            "mq5_crypto": "CryptoMAFixedStrategy"
         }
         target_name = target_strat_map.get(strategy_type, "SmartFuturesStrategy")
         
